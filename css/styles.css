@@ -1224,6 +1224,9 @@ body .anim-1 span{
 	font-family: 'MazzardH', sans-serif;
 }
 @media (min-width: 768px) {
+  .countdown-zero-text {
+    font-size: 20px;
+    display: none; }
   .btn-1:hover {
     -webkit-transform: scale(1.125);
     transform: scale(1.125);
@@ -1388,10 +1391,15 @@ body .anim-1 span{
   .navbar-wrapper {
     display: block !important;
     opacity: 1 !important; } }
-
+  .countdown-zero-text {
+    font-size: 20px;
+    display: none; }
 @media (min-width: 1610px) {
   .container {
-    max-width: 1558px; } }
+    max-width: 1558px; }
+  .countdown-zero-text {
+    font-size: 28px;
+    display: none; } }
 
 @media (max-width: 1609px) {
   html,

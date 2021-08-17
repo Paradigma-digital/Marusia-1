@@ -138,14 +138,33 @@ $(document).ready(function() {
 
 	// Countdown
 
-	var endDate = new Date(2021, 7, 17, 0, 0, 0, 0);
-
-	$(".countdown").each(function() {
-		$(this).countdown({
-			until: endDate,
-			layout : "<div class='cd-section cd-section-days'><span>{dnn} {dl}</span></div>"
+	var endDate = new Date(2021, 7, 20, 17, 25, 0, 0);
+	var startDate = new Date()
+	var diffTime = endDate - startDate;
+	var diffHours = Math.ceil(diffTime / (1000 * 60 * 60)); 
+	if (diffHours > 0 && diffHours <= 1){
+		endDate = new Date(startDate.getTime() + 1000 * (60 + 15) * 60);
+		diffTime = endDate - startDate;
+		diffHours = Math.ceil(diffTime / (1000 * 60 * 60)); 
+	}
+	var layout = "<div class='cd-section cd-section-days'><span>{dn} {dl}</span></div>"
+	if (diffHours <= 24)
+	{
+		layout = "<div class='cd-section cd-section-days'><span>{hn} {hl}</span></div>"
+	}
+	if (diffHours > 0) {
+		$(".countdown").each(function() {
+			$(this).countdown({
+				until: endDate,
+				layout : layout
+			});
 		});
-	});
+	} else {
+		$(".section-countdown .countdown-text, .section-countdown .countdown").hide()
+		$(".section-countdown .countdown-zero-text").show()
+
+	}
+	
 
 	// Countdown END
 
