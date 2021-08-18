@@ -136,9 +136,9 @@ $(document).ready(function() {
 
 	});
 
-	// Countdown
+	// Countdown 2021-08-16 18:00:00
 
-	var endDate = new Date(2021, 7, 20, 17, 25, 0, 0);
+	var endDate = new Date(2021, 7, 16, 18, 0, 0, 0);
 	var startDate = new Date()
 	var diffTime = endDate - startDate;
 	var diffHours = Math.ceil(diffTime / (1000 * 60 * 60)); 
