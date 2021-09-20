@@ -40,6 +40,31 @@ $(window).resize(function () {
 
 $(document).ready(function() {
 
+	// Stage tmb
+	
+	$(".stage-tmb-switch").on("click", function () {
+
+		if (!$(this).hasClass("active")) {
+
+			$(this).addClass("active");
+
+			$(this).find(".stage-tmb-front").hide();
+			$(this).find(".stage-tmb-back").fadeIn(150);
+
+		} else {
+
+			$(this).removeClass("active");
+
+			$(this).find(".stage-tmb-back").hide();
+			$(this).find(".stage-tmb-front").fadeIn(150);
+
+		}
+
+
+	});
+	
+	// Stage tmb END
+	
 	slickResponsive();
 
 	$(".video-poster").click(function () {
