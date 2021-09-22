@@ -1872,6 +1872,10 @@ body .anim-1 span {
 	display: none;
 }
 
+.countdown-zero-text .units-rub {
+	font-weight: normal;
+}
+
 @media (min-width: 1610px) {
 	.container {
 		max-width: 1558px;
