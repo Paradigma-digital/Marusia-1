@@ -525,6 +525,10 @@ header {
 	align-items: center;
 }
 
+.logo-img-mob {
+	display: none;
+}
+
 .header-logo-1 {
 	margin: 0 85px 0 0;
 }
@@ -3611,8 +3615,16 @@ body .anim-1 span {
 		margin: 0 15px 0 0;
 	}
 
+	.logo-img {
+		display: none;
+	}
+
+	.logo-img-mob {
+		display: block;
+	}
+
 	.header-logo-1 img {
-		width: 80px;
+		width: 42px;
 	}
 
 	.header-logo-2 {
