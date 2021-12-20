@@ -73,6 +73,7 @@ body {
 	font-style: normal;
 	-webkit-font-feature-settings: 'pnum' on, 'lnum' on;
 	font-feature-settings: 'pnum' on, 'lnum' on;
+	-webkit-tap-highlight-color: transparent;
 }
 
 p {
@@ -562,7 +563,7 @@ header {
 }
 
 .header-logo-1 {
-	margin: 0 85px 0 0;
+	margin: 0 15px 0 0;
 }
 
 .header-logo-2 {
@@ -1652,6 +1653,27 @@ body .anim-1 span {
 	font-family: 'MazzardH', sans-serif;
 }
 
+.logo-img.tablet {
+	display: none;
+  }
+   
+    
+@media (min-width: 768px) and (max-width: 992px) {
+	.header-col-1 .header-logos>span,
+	.header-col-1 .header-logos>.vk,
+	.header-col-1 .header-logos>.header-logo-1 {
+	  display: none;
+	} 
+	.logo-img.tablet {
+	  display: flex;
+	}
+	.logo-img.tablet>a>img.vk{
+	  margin-top: 0 ;
+	}
+  
+  }
+  
+
 @media (min-width: 768px) {
 
 	.stage-tmb-switch:hover .stage-tmb-q:before {
@@ -1946,7 +1968,7 @@ body .anim-1 span {
 	}
 
 	.header-logo-1 {
-		margin: 0 64px 0 16px;
+		margin: 0 15px 0 16px;
 	}
 
 	.header-logos {
@@ -3537,7 +3559,7 @@ body .anim-1 span {
 	}
 
 	footer .header-logo-1 {
-		margin: 0 14px 0 0;
+		margin: 0 9px 0 0;
 	}
 
 	footer .header-logo-1 img {
@@ -3632,6 +3654,11 @@ body .anim-1 span {
 }
 
 @media (max-width: 767px) {
+	.header-col-1 .header-logos>span,
+	.header-col-1 .header-logos>.vk,
+	.header-col-1 .header-logos>.header-logo-1 {
+	  display: none;
+	} 
 	html,
 	body {
 		font-size: 16px;
@@ -3651,7 +3678,7 @@ body .anim-1 span {
 		margin: 0 -15px 0 0;
 	}
 	.header-logos a:first-child {
-		margin-right: 0;
+
 		padding: 6px;
 	}
 	.header-logos a:last-child {
